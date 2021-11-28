@@ -159,7 +159,7 @@ const handleSlider = () => {
     if(!btn_clicked){
         if(next_image < 5){
             bannerWrapper.style.transition = 'all .5s ease';
-            bannerWrapper.style.background = `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/assets/imgs/banner-img-0${next_image}.jpg')`;
+            bannerWrapper.style.background = `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://camsteph.github.io/API-Shop/assets/imgs/banner-img-0${next_image}.jpg')`;
             bannerWrapper.style.backgroundPosition = 'center';
             bannerWrapper.style.backgroundSize = 'cover';
             bannerWrapper.style.backgroundRepeat = 'no-repeat';
