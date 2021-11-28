@@ -49,7 +49,7 @@ const displayProducts = (arr_of_products) => {
         cartDetailsWrapper.innerHTML += `
             <div class="detail-card">
                 <header class="detail-card-header">
-                    <img src="/assets/imgs/service-img-0${img_id}.jpg" alt="">
+                    <img src="https://camsteph.github.io/API-Shop/assets/imgs/service-img-0${img_id}.jpg" alt="">
                     <div class="detail-value-wrap">
                         <span class="card-name">${name}</span>
                         <button class="remove-service-btn" id="${btn_id}" onclick="removeProductFromSelectedProducts(${btn_id})" data-remove-service-btn><ion-icon name="trash"></ion-icon></button>
