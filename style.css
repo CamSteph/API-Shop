@@ -23,8 +23,8 @@
   min-height: 100vh;
   width: 100%;
   max-width: 325px;
-  -webkit-box-shadow: 0 10px 36px -12px #3a4452;
-          box-shadow: 0 10px 36px -12px #3a4452;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,6 +179,13 @@
   cursor: pointer;
 }
 
+.container .header-wrapper .nav-section .nav-wrapper .cart-qty-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
 .container .header-wrapper .nav-section .nav-wrapper .cart-qty-wrap .nav-cart-qty {
   background-color: tomato;
   height: 20px;
@@ -191,8 +198,8 @@
   display: grid;
   place-items: center;
   position: absolute;
-  top: 20px;
-  right: 5px;
+  top: 12px;
+  left: 10px;
   cursor: default;
 }
 
@@ -395,7 +402,7 @@
 .container .api-service-section .service-wrapper .service-card .details-wrap .add-to-cart-wrap .add-to-cart-btn {
   outline: none;
   border: none;
-  padding: 5px 15px;
+  padding: 5px 40px;
   border-radius: 5px;
   background-color: #175268;
   color: #fafafa;
@@ -416,7 +423,7 @@
 }
 
 .container .api-service-section .service-wrapper .service-card .details-wrap .add-to-cart-wrap .add-to-cart-btn:hover {
-  padding: 5px 40px;
+  background: #29728d;
   -webkit-transition: all .65s ease;
   transition: all .65s ease;
 }
@@ -442,7 +449,7 @@
 }
 
 .container .cart-page-wrapper .cart-details-wrapper {
-  min-height: 50vh;
+  min-height: 20vh;
   width: 100%;
   padding-top: 25px;
   display: -webkit-box;
