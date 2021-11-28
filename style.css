@@ -213,7 +213,7 @@
   min-height: 15rem;
   width: 100%;
   color: #ebebeb;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.85))), url("/assets/imgs/banner-img-01.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.85))), url("https://camsteph.github.io/API-Shop/assets/imgs/banner-img-01.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/assets/imgs/banner-img-01.jpg");
   background-position: center;
   background-size: cover;
