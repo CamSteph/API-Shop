@@ -1,0 +1,516 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;900&display=swap');
+
+// Variables
+$primary-bg-color: rgb(250, 250, 250);
+$primary-font-color: rgb(23, 82, 104);
+$secondary-font-color: rgb(235, 235, 235);
+$tertiary-font-color: rgb(102, 102, 102);
+
+// Functions
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin displayFlex($flexDirection: row, $alignItems: center, $justifyContent: center) {
+    display: flex;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+
+// General styling
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif, monospace, 'Courier New', Courier;
+    color: $primary-font-color;
+}
+
+// Home page styling
+.container{
+    min-height: auto;
+    position: relative;
+
+    // MENU STYLING
+    .menu-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: rgba(250, 250, 250, 1);
+        height: 100%;
+        min-height: 100vh;
+        width: 100%;
+        max-width: 325px;
+        // box-shadow: 0 10px 36px -12px rgb(58, 68, 82);
+        box-shadow: none;
+        @include displayFlex(column, center, flex-start);
+        @include padding(20px);
+        transition: all 1s ease;
+        transform: translateX(-335px);
+
+        .close-menu-btn{
+            font-size: 32px;
+            cursor: pointer;
+            transition: all .65s ease;
+
+            &:hover{
+                transform: rotate(90deg);
+            }
+        }
+
+        .menu-ul{
+            min-height: 220px;
+            min-width: 80px;
+            @include displayFlex(column, center, space-evenly);
+            // background-color: red;
+
+            .menu-li{
+                padding: 8px 60px;
+                font-size: 17px;
+                font-weight: 600;
+                text-decoration: none;
+                list-style-type: none;
+                cursor: pointer;
+
+                &:hover{
+                    background:rgb(140, 180, 194);
+                    color: $secondary-font-color;
+                    border-radius: 5px;
+
+                    &:first-child{
+                        color: $secondary-font-color;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    width: 50px;
+
+                    // &:hover{
+                    //     color: $secondary-font-color;
+                    // }
+                }
+            }
+        }
+    }
+
+    // HEADER STYLING
+    .header-wrapper{
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $primary-bg-color;
+        box-shadow: 0 1px 26px -6px rgb(96, 114, 141);
+        @include padding(8px, 8px 8px, 8px);
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 5;
+
+        .logo-section{
+            min-height: 30px;
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 23px;
+            @include padding(0, 0, 0, 8px);
+
+            a{
+                text-decoration: none;
+                    
+                    ion-icon{
+                        cursor: pointer;
+                        margin-right: 8px;
+                        margin-top: 8px;
+                    }
+        
+                    span{
+                        cursor: pointer;
+                    }
+            }
+        }
+
+        .nav-section{
+            min-height: 30px;
+            width: 25%;
+
+            .nav-wrapper{
+                min-height: 30px;
+                width: 100%;
+                @include displayFlex(row, center, space-evenly);
+                
+                ion-icon{
+                    font-size: 23px;
+                    cursor: pointer;
+                }
+
+                .cart-qty-wrap{
+                    display: flex;
+                    position: relative;
+
+                    .nav-cart-qty{
+                        background-color: tomato;
+                        height: 20px; 
+                        width: 20px;
+                        border-radius: 50%; 
+                        text-align: center; 
+                        color: white; 
+                        font-weight: 600;
+                        display: grid;
+                        place-items: center;
+                        position: absolute; 
+                        top: 12px; 
+                        left: 10px;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+
+    // HOME PAGE STYLING
+    .home-page-wrapper{
+        min-height: 150vh;
+        width: 100%;
+        text-align: center;
+        
+        // BANNER STYLING
+        .banner-wrapper{
+            min-height: 15rem;
+            width: 100%;
+            color: $secondary-font-color;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/imgs/banner-img-01.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @include displayFlex(row, center, space-between);
+            @include padding(25px, 10px, 10px, 10px);
+
+            .banner-msg-wrapper{
+                min-height: 8rem;
+                @include displayFlex(column, center, space-evenly);
+
+                h3{
+                    color: $secondary-font-color;
+                }
+
+                .shop-now-btn{
+                    outline: none;
+                    border: 1px solid $secondary-font-color;
+                    background: rgba(0, 0, 0, 0);
+                    border-radius: 4px;
+                    color: $secondary-font-color;
+                    font-weight: 900;
+                    padding: 5px 15px;
+                    cursor: pointer;
+                    transition: all .65s ease;
+
+                    &:hover{
+                        padding: 5px 32px;
+                    }
+                }
+
+                .down-arrow{
+                    color: $secondary-font-color;
+                    font-size: 22px;
+                    cursor: pointer;
+                }
+            }
+
+            
+            span{
+                color: $secondary-font-color;
+
+                ion-icon{
+                    font-size: 25px;
+                    color: $secondary-font-color;
+                    cursor: pointer;
+                    opacity: .45;
+                    transition: all .65s ease;
+
+                    &:hover{
+                        opacity: 1;
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    // API SERVICE SECTION STYLING
+    .api-service-section{
+        width: 100%;
+        height: auto;
+        padding-top: 15px;
+        @include displayFlex(column, center, space-evenly);
+
+        .api-service-title{
+            font-size: 28px;
+        }
+
+        .service-wrapper{
+            @include displayFlex(column, center, space-evenly);
+            padding: 15px;
+            gap: 20px;
+
+            .service-card{
+                min-height: 150px;
+                width: 90%;
+                max-width: 350px;
+                border-radius: 4px;
+                box-shadow: 0 0 36px -12px rgb(78, 78, 78);
+                // border: 1px solid rgb(0, 0, 0);
+
+                .card-img{
+                    width: 100%;
+                    min-height: 200px;
+                    max-height: 275px;
+                    object-fit: cover;
+                    border-radius: 4px 4px 0 0;
+                }
+
+                .details-wrap{
+                    min-height: 150px;
+                    padding: 12px;
+                    padding-right: 30px;
+                    @include displayFlex(column, flex-start, space-around);
+
+                    .service-card-title{
+                        font-size: 26px;
+                        
+                    }
+
+                    .service-card-description{
+                        text-align: left;
+                        color: $tertiary-font-color;
+                        font-weight: 600;
+                    }
+
+                    .add-to-cart-wrap{
+                        @include displayFlex(row, center, flex-start);
+
+                        .add-to-cart-btn{
+                            outline: none;
+                            border: none;
+                            padding: 5px 40px;
+                            border-radius: 5px;
+                            background-color: $primary-font-color;
+                            color: $primary-bg-color;
+                            font-weight: 600;
+                            margin-top: 5px;
+                            cursor: pointer;
+                            transition: all .65s ease;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+    
+                            &:hover{
+                                background:rgb(41, 114, 141);
+                                transition: all .65s ease;
+                            }
+    
+                            ion-icon{
+                                color: $secondary-font-color;
+                                font-size: 18px;
+                                margin-left: 5px;
+                            }
+
+                        }
+                    }
+                    
+                    select{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    // CART PAGE WRAPPER STYLING
+    .cart-page-wrapper{
+        text-align: center;
+        padding-top: 25px;
+
+        .cart-page-title{
+            font-size: 28px;
+            border-bottom: 1px solid $primary-font-color;
+        }
+
+        .cart-details-wrapper{
+            min-height: 20vh;
+            width: 100%;
+            padding-top: 25px;
+            @include displayFlex(column, center, space-evenly);
+            flex-wrap: wrap;
+
+            .detail-card{
+                width: 90%;
+                max-width: 450px;
+                background: rgb(189, 238, 238);
+                @include displayFlex(column, center, space-evenly);
+                padding: 12px 0;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                cursor: default;
+
+                .detail-card-header{
+                    width: 80%;
+                    @include displayFlex(row, center, flex-start);
+                    padding-bottom: 6px;
+                    border-bottom: 1px solid rgb(132, 197, 197);
+
+                    img{
+                        height: 4rem;
+                        width: 4rem;
+                        object-fit: cover;
+                        border-radius: 100%;
+                        margin-right: 6px;
+                    }
+
+                    .detail-value-wrap{
+                        width: 100%;
+                        @include displayFlex(row, center, space-between);
+
+                        .card-name{
+                            font-size: 18px;
+                        }
+
+                        .remove-service-btn{
+                            padding: 8px;
+                            padding-top: 8px;
+                            padding-bottom: 2px;
+                            border-radius: 50%;
+                            border: none;
+                            outline: none;
+                            background: teal;
+                            font-weight: 600;
+                            color: #fff;
+                            cursor: pointer;
+                            transition: all .5s ease;
+
+                            &:hover{
+                                transform: scale(.90);
+                            }
+
+                            ion-icon{
+                                color: $secondary-font-color;
+                                font-size: 17px;
+                            }
+                        }
+                    }
+
+                }
+
+                .detail-card-body{
+                    width: 80%;
+                    // background-color: red;
+                    padding: 0 5px;
+
+                    .card-body-row{
+                        @include displayFlex(row, center, space-between);
+
+                        .card-body-title,
+                        .card-body-price{
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .detail-card-footer{
+                    width: 80%;
+                    border-top: 1px solid rgb(132, 197, 197);
+                    padding-top: 3px;
+                    @include displayFlex(row, center, space-between);
+
+                    .total-card-price-name{
+                        font-weight: 600;
+                    }
+
+                    .total-card-price-value{
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+
+        .total-amount-section{
+            padding: 15px;
+            padding-top: 5px;
+            @include displayFlex(column, center, space-evenly);
+
+            button{
+                padding: 5px 12px;
+                margin-top: 10px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                background: $primary-font-color;
+                color: $secondary-font-color;
+                font-size: 18px;
+                @include displayFlex(row, center, space-between);
+                cursor: pointer;
+                transition: all .65s ease;
+
+                &:hover{
+                    padding: 5px 42px;
+                }
+
+                
+                ion-icon{
+                    color: $secondary-font-color;
+                    font-size: 17px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (min-width: 768px) {
+    .container{
+
+        // API SERVICE SECTION STYLING
+    .api-service-section{
+        width: 100%;
+        height: auto;
+        padding-top: 15px;
+        @include displayFlex(column, center, space-evenly);
+
+        .api-service-title{
+            font-size: 28px;
+        }
+
+        .service-wrapper{
+            width: 100%;
+            @include displayFlex(row, center, space-evenly);
+            flex-wrap: wrap;
+            padding: 15px;
+            // gap: 10px;
+
+            .service-card{
+                min-height: 250px;
+                width: 90%;
+                max-width: 350px;
+                border-radius: 4px;
+                box-shadow: 0 0 36px -12px rgb(78, 78, 78);
+                text-align: left;
+
+                .card-img{
+                    width: 100%;
+                    min-height: 200px;
+                    max-height: 275px;
+                    object-fit: cover;
+                    border-radius: 4px 4px 0 0;
+                }
+            }
+        }
+    }
+    }
+}
