@@ -119,7 +119,7 @@ for(let i = 0; i < ARR_OF_SERVICES.length; i++){
 
     serviceWrapper.innerHTML += `
     <div class="service-card">
-        <img src="/assets/imgs/service-img-0${i+1}.jpg" class="card-img" alt="">
+        <img src="https://camsteph.github.io/API-Shop/assets/imgs/service-img-0${i+1}.jpg" class="card-img" alt="">
         <div class="details-wrap">
             <span class="service-card-title">${ARR_OF_SERVICES[i].name}</span>
             <span class="service-card-price">$${ARR_OF_SERVICES[i].price} /mo</span>
