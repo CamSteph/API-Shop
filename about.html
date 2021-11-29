@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Shop</title>
+    <link rel="shortcut icon" href="#">
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ion icon cdn -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- custom javascript -->
+    <script defer src="about.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="menu-container" data-menu>
+            <span class="close-menu-btn"><ion-icon name="close-sharp" data-close-menu-btn></ion-icon></span>
+            <ul class="menu-ul">
+                <a href="index.html" class="menu-li"><li>Home</li></a>
+                <a href="cart.html" class="menu-li"><li>Cart</li></a>
+                <a href="about.html" class="menu-li"><li>About</li></a>
+            </ul>
+            <p class="menu-footer-msg" style="position: absolute;
+             bottom: 10px;">API Shop &copy;</p>
+        </aside>
+        <header class="header-wrapper">
+            <section class="logo-section">
+                <a href="index.html">
+                    <ion-icon name="bar-chart-sharp"></ion-icon>
+                </a>
+                <a href="index.html">
+                    <span>API Shop.</span>
+                </a>
+            </section>
+            <section class="nav-section">
+                <nav class="nav-wrapper" style="display: flex; justify-content: space-evenly;">
+                    <ion-icon name="ellipsis-horizontal-sharp" data-menu-btn></ion-icon>
+                    <span class="cart-qty-wrap">
+                        <a href="cart.html"><ion-icon name="cart"></ion-icon></a>
+                        <span class="nav-cart-qty" data-nav-cart-qty></span>
+                    </span>
+                </nav>
+            </section>
+        </header>
+        <main class="about-section-wrapper">
+            <section class="mission-statement-section">
+                <span class="title">Mission Statement:</span>
+                <div class="content-wrap">
+                    <img src="https://camsteph.github.io/API-Shop/assets/imgs/mission.svg" alt="Mission Statement">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt dolorum, quaerat sapiente perspiciatis velit provident labore fuga veritatis repudiandae placeat laboriosam eligendi voluptas officia molestias doloremque obcaecati, cum ex quos unde nulla minima praesentium autem et ratione! Nam nesciunt adipisci in quam ut molestias saepe obcaecati aliquam consectetur porro. Earum.</p>
+                </div>
+            </section>
+            <section class="accomplished-statement-section">
+                <span class="title">Accomplished Goals:</span>
+                <div class="content-wrap">
+                    <img src="https://camsteph.github.io/API-Shop/assets/imgs/accomplished.svg" alt="Accomplished Goals">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt dolorum, quaerat sapiente perspiciatis velit provident labore fuga veritatis repudiandae placeat laboriosam eligendi voluptas officia molestias doloremque obcaecati, cum ex quos unde nulla minima praesentium autem et ratione! Nam nesciunt adipisci in quam ut molestias saepe obcaecati aliquam consectetur porro. Earum.</p>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <section class="footer-left-section">
+                <span>API Shop. &copy</span>
+            </section>
+            <section class="footer-right-section">
+                <p>Dev: Cameron Stephenson</p>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
